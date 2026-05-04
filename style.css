@@ -1,0 +1,146 @@
+/* Custom Theme All-Biru Profesional: Biru Pucat + Biru Tua + White Only */
+
+:root {
+  --primary-custom: #4a8bdf; /* Biru tua utama */
+  --secondary-custom: #3b82f6; /* Biru medium */
+  --light-bg: #effafd; /* Biru pucat */
+  --text-dark: #1e293b; /* Dark blue-gray, NO pure black */
+  --success-custom: #10b981;
+  --bg-gradient: linear-gradient(
+    135deg,
+    var(--light-bg) 0%,
+    #f0f9ff 50%,
+    #e0f2fe 100%
+  );
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-custom) !important;
+  border-color: var(--primary-custom) !important;
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary-custom) !important;
+  color: white !important;
+}
+
+.bg-light-bg {
+  background-color: var(--light-bg) !important;
+}
+
+.bg-gradient-custom {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 139, 223, 0.15);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(74, 139, 223, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-custom);
+  border-color: var(--primary-custom);
+}
+
+.btn-primary-custom:hover {
+  background-color: #3b7cd9;
+  border-color: #3b7cd9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary-custom {
+  background-color: var(--secondary-custom);
+  border-color: var(--secondary-custom);
+  color: white;
+}
+
+.btn-secondary-custom:hover {
+  background-color: #8b0062;
+  border-color: #8b0062;
+  transform: translateY(-1px);
+}
+
+.form-control:focus {
+  border-color: var(--primary-custom);
+  box-shadow: 0 0 0 0.2rem rgba(74, 139, 223, 0.25);
+}
+
+.table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.table-dark {
+  background: var(--primary-custom) !important;
+  color: white !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out; /* Lebih cepat & subtle */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dashboard Stats - All Blue */
+.stat-card {
+  background: linear-gradient(
+    135deg,
+    var(--primary-custom),
+    var(--secondary-custom)
+  );
+  color: white;
+  text-align: center;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(74, 139, 223, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(74, 139, 223, 0.3);
+}
+
+/* Text overrides - no black */
+.text-dark {
+  color: var(--text-dark) !important;
+}
+.table-dark th {
+  color: white !important;
+  background: var(--primary-custom) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .stat-card {
+    padding: 1.25rem;
+  }
+}
